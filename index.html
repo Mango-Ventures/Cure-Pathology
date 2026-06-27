@@ -520,6 +520,32 @@
       font-size: 0.7rem; font-weight: 600; letter-spacing: 3px;
       text-transform: uppercase; color: var(--gold);
     }
+
+    /* enriched intro: fill the vertical space ~80% */
+    .intro-sticky { justify-content: space-between; padding: 12vh 5vw 7vh; gap: 0; }
+    .intro-sticky .converge-hint { position: static; transform: none; left: auto; }
+    .intro-center { display: flex; flex-direction: column; align-items: center; gap: clamp(16px, 2.8vh, 30px); }
+    .intro-tagline {
+      font-size: clamp(0.95rem, 2.3vw, 1.2rem);
+      color: var(--text-dim);
+      max-width: 34ch; line-height: 1.6; font-weight: 500;
+    }
+    .intro-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 560px; }
+    .intro-chip {
+      font-size: 0.78rem; font-weight: 600;
+      color: var(--navy);
+      background: rgba(10,22,40,0.05);
+      border: 1px solid rgba(10,22,40,0.12);
+      border-radius: 999px;
+      padding: 8px 16px;
+    }
+    .intro-arrow {
+      width: 18px; height: 18px;
+      border-right: 1.5px solid rgba(10,22,40,0.3);
+      border-bottom: 1.5px solid rgba(10,22,40,0.3);
+      transform: rotate(45deg);
+      animation: bounce-down 1.5s ease-in-out infinite;
+    }
     .converge-line {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
@@ -1020,11 +1046,23 @@
 </nav>
 
 <!-- INTRO: brand name converges as you scroll (opening slide) -->
-<section class="converge" style="height:200vh;">
-  <div class="converge-sticky">
+<section class="converge intro" style="height:200vh;">
+  <div class="converge-sticky intro-sticky">
     <div class="converge-hint">Scroll to explore</div>
-    <div class="converge-eyebrow">Muzaffarpur's trusted lab</div>
-    <div class="converge-line" data-converge="text" data-spread="55" data-rot="55">CURE PATHOLOGY</div>
+
+    <div class="intro-center">
+      <div class="converge-eyebrow">Muzaffarpur's trusted lab</div>
+      <div class="converge-line" data-converge="text" data-spread="55" data-rot="55">CURE PATHOLOGY</div>
+      <p class="intro-tagline">Accurate blood tests, same-day reports &amp; home sample collection across Muzaffarpur.</p>
+      <div class="intro-chips">
+        <span class="intro-chip">⭐ 4.9 Google Rating</span>
+        <span class="intro-chip">44+ Reviews</span>
+        <span class="intro-chip">🏠 Home Collection</span>
+        <span class="intro-chip">⚡ Same-Day Reports</span>
+      </div>
+    </div>
+
+    <div class="intro-arrow" aria-hidden="true"></div>
   </div>
 </section>
 
