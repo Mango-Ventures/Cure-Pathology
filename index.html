@@ -523,12 +523,12 @@
     .converge-line {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
-      font-size: clamp(2.6rem, 9vw, 7rem);
-      line-height: 1;
+      font-size: clamp(1.6rem, 8vw, 7rem);
+      line-height: 1.05;
       letter-spacing: -2px;
       text-transform: uppercase;
       perspective: 600px;
-      display: flex; flex-wrap: wrap; justify-content: center;
+      display: flex; flex-wrap: nowrap; white-space: nowrap; justify-content: center;
       max-width: 100%;
     }
     .converge-char { display: inline-block; will-change: transform; color: var(--gold); }
@@ -965,9 +965,30 @@
 
     @media(max-width:600px) {
       .nav-links { display: none; }
-      .hero-stats { gap: 24px; }
+      .hero-stats { gap: 22px; }
       .stat-divider { display: none; }
-      .trust-strip { gap: 20px; }
+      .trust-strip { gap: 14px 18px; padding: 12px 5vw; }
+      .trust-item { font-size: 0.72rem; }
+
+      section { padding: 64px 5vw; }
+
+      /* keep brand name on one tidy line */
+      .converge-line { letter-spacing: -1px; }
+      .converge-sticky { gap: 20px; }
+      .converge-caption { font-size: 0.92rem; gap: 9px; }
+      .converge-caption .bracket { width: 16px; }
+      .converge-icons { gap: 13px; }
+      .converge-hint { top: 12vh; font-size: 0.58rem; }
+
+      /* hero: stop long words overflowing */
+      .hero { padding: 110px 6vw 70px; }
+      .hero-title { font-size: clamp(2.4rem, 10vw, 4rem); letter-spacing: -1px; }
+      .hero-sub { font-size: 0.98rem; }
+
+      .section-title { font-size: clamp(1.6rem, 6.5vw, 2.2rem); }
+      .book-card { padding: 24px 18px; }
+      .booking-actions, .hero-actions { width: 100%; }
+      .btn-primary, .btn-outline, .btn-dark, .btn-wa { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -1067,14 +1088,14 @@
     <p class="section-desc">Comprehensive panels for preventive and diagnostic needs — accurate results, fast turnaround.</p>
   </div>
   <div class="tests-grid">
-    <div class="test-card"><div class="test-icon">🩸</div><div class="test-name">Complete Blood Count (CBC)</div><div class="test-desc">Checks RBCs, WBCs, hemoglobin, and platelets. Essential for routine health monitoring.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🫀</div><div class="test-name">Lipid Profile</div><div class="test-desc">Cholesterol, triglycerides, LDL/HDL — critical for heart health assessment.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🦋</div><div class="test-name">Thyroid Function (T3/T4/TSH)</div><div class="test-desc">Detects hypo/hyperthyroidism. Recommended for fatigue, weight changes, and mood disorders.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🍬</div><div class="test-name">Blood Sugar / HbA1c</div><div class="test-desc">Fasting, PP, and 3-month average glucose levels for diabetes management.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🫁</div><div class="test-name">Liver Function Test (LFT)</div><div class="test-desc">SGPT, SGOT, bilirubin — monitors liver health and medication effects.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🔬</div><div class="test-name">Kidney Function Test (KFT)</div><div class="test-desc">Creatinine, urea, eGFR — essential for kidney disease detection and monitoring.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🧬</div><div class="test-name">Urine Routine & Microscopy</div><div class="test-desc">Detects infections, kidney disorders, and diabetes markers through urine analysis.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">💉</div><div class="test-name">Full Body Checkup Package</div><div class="test-desc">Comprehensive 40+ parameter panel covering heart, liver, kidney, diabetes, thyroid.</div><div class="test-price"></div></div>
+    <div class="test-card"><div class="test-icon">🩸</div><div class="test-name">Complete Blood Count (CBC)</div><div class="test-desc">Checks RBCs, WBCs, hemoglobin, and platelets. Essential for routine health monitoring.</div><div class="test-price">₹ 150 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🫀</div><div class="test-name">Lipid Profile</div><div class="test-desc">Cholesterol, triglycerides, LDL/HDL — critical for heart health assessment.</div><div class="test-price">₹ 250 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🦋</div><div class="test-name">Thyroid Function (T3/T4/TSH)</div><div class="test-desc">Detects hypo/hyperthyroidism. Recommended for fatigue, weight changes, and mood disorders.</div><div class="test-price">₹ 400 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🍬</div><div class="test-name">Blood Sugar / HbA1c</div><div class="test-desc">Fasting, PP, and 3-month average glucose levels for diabetes management.</div><div class="test-price">₹ 120 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🫁</div><div class="test-name">Liver Function Test (LFT)</div><div class="test-desc">SGPT, SGOT, bilirubin — monitors liver health and medication effects.</div><div class="test-price">₹ 350 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🔬</div><div class="test-name">Kidney Function Test (KFT)</div><div class="test-desc">Creatinine, urea, eGFR — essential for kidney disease detection and monitoring.</div><div class="test-price">₹ 350 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🧬</div><div class="test-name">Urine Routine & Microscopy</div><div class="test-desc">Detects infections, kidney disorders, and diabetes markers through urine analysis.</div><div class="test-price">₹ 80 onwards</div></div>
+    <div class="test-card"><div class="test-icon">💉</div><div class="test-name">Full Body Checkup Package</div><div class="test-desc">Comprehensive 40+ parameter panel covering heart, liver, kidney, diabetes, thyroid.</div><div class="test-price">₹ 999 onwards</div></div>
   </div>
 </section>
 
@@ -1217,7 +1238,7 @@
       <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Address</div><div class="contact-value">Rd Number 3, near State Bank of India, Juran Chapra, Brahmapura, Muzaffarpur, Bihar 842001</div></div></div>
       <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-label">Phone</div><div class="contact-value"><a href="tel:09102042222">091020 42222</a></div></div></div>
       <div class="contact-item"><div class="contact-icon">🕗</div><div><div class="contact-label">Hours</div><div class="contact-value">Mon–Fri: 8:00 AM – 8:00 PM<br>Sat–Sun: 8:00 AM – 6:00 PM</div></div></div>
-      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-label">Book via WhatsApp</div><div class="contact-value"><a href="https://wa.me/919631558655" style="color:var(--green);">wa.me → Book Appointment</a></div></div></div>
+      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-label">Book via WhatsApp</div><div class="contact-value"><a href="https://wa.me/919198478500" style="color:var(--green);">wa.me → Book Appointment</a></div></div></div>
     </div>
     <div class="map-wrap">
       <iframe
@@ -1284,7 +1305,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Cure <span>Pathology</span></div>
-  <div class="footer-copy">© 2025 Cure Pathology. Juran Chapra, Muzaffarpur, Bihar.</div>
+  <div class="footer-copy">© 2026 Cure Pathology. Juran Chapra, Muzaffarpur, Bihar.</div>
   <div class="footer-copy" style="color:rgba(255,255,255,0.2);">Designed by Mango Web Design & Studio</div>
 </footer>
 
@@ -1405,9 +1426,9 @@
       { name: 'Typhoid (Widal)' },
       { name: 'Malaria Antigen' },
       { name: 'CRP (C-Reactive Protein)' },
-      { name: 'Iron Studies' },
+      { name: 'Iron Studies'},
       { name: 'Beta hCG (Pregnancy)' },
-      { name: 'Electrolytes (Na / K / Cl)' },
+      { name: 'Electrolytes (Na / K / Cl)'},
       { name: 'Other / Not sure — please advise' }
     ];
 
