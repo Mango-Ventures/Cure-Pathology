@@ -985,8 +985,8 @@
 
       section { padding: 64px 5vw; }
 
-      /* keep brand name on one tidy line */
-      .converge-line { letter-spacing: -1px; }
+      /* keep brand name on one tidy line, filling ~80% of the screen width */
+      .converge-line { font-size: clamp(1.8rem, 8.6vw, 4.5rem); letter-spacing: -1px; }
       .converge-sticky { gap: 20px; }
       .converge-caption { font-size: 0.92rem; gap: 9px; }
       .converge-caption .bracket { width: 16px; }
@@ -1051,7 +1051,7 @@
     <div class="stat-divider"></div>
     <div class="stat"><div class="stat-num">8am</div><div class="stat-label">Opens Daily</div></div>
   </div>
-  <div class="scroll-hint"><span></span><div class="scroll-arrow"></div></div>
+  <div class="scroll-hint"><span>Scroll</span><div class="scroll-arrow"></div></div>
 </section>
 
 <!-- TRUST STRIP -->
@@ -1078,9 +1078,9 @@
 <section class="converge alt" style="height:200vh;">
   <div class="converge-sticky">
     <p class="converge-caption">
-      <!-- <svg class="bracket" viewBox="0 0 27 78" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"/></svg> -->
-      <span>EVERYTHING WE TEST FOR, UNDER ONE ROOF</span>
-      <!-- <svg class="bracket flip" viewBox="0 0 27 78" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"/></svg> -->
+      <svg class="bracket" viewBox="0 0 27 78" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"/></svg>
+      <span>everything we test for, under one roof</span>
+      <svg class="bracket flip" viewBox="0 0 27 78" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M26.52 77.21h-5.75c-6.83 0-12.38-5.56-12.38-12.38V48.38C8.39 43.76 4.63 40 .01 40v-4c4.62 0 8.38-3.76 8.38-8.38V12.4C8.38 5.56 13.94 0 20.77 0h5.75v4h-5.75c-4.62 0-8.38 3.76-8.38 8.38V27.6c0 4.34-2.25 8.17-5.64 10.38 3.39 2.21 5.64 6.04 5.64 10.38v16.45c0 4.62 3.76 8.38 8.38 8.38h5.75v4.02Z"/></svg>
     </p>
     <div class="converge-icons" data-converge="icons" data-spread="85" data-rot="45">
       <span class="converge-icon" title="Blood tests"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
@@ -1101,14 +1101,14 @@
     <p class="section-desc">Comprehensive panels for preventive and diagnostic needs — accurate results, fast turnaround.</p>
   </div>
   <div class="tests-grid">
-    <div class="test-card"><div class="test-icon">🩸</div><div class="test-name">Complete Blood Count (CBC)</div><div class="test-desc">Checks RBCs, WBCs, hemoglobin, and platelets. Essential for routine health monitoring.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🫀</div><div class="test-name">Lipid Profile</div><div class="test-desc">Cholesterol, triglycerides, LDL/HDL — critical for heart health assessment.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🦋</div><div class="test-name">Thyroid Function (T3/T4/TSH)</div><div class="test-desc">Detects hypo/hyperthyroidism. Recommended for fatigue, weight changes, and mood disorders.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🍬</div><div class="test-name">Blood Sugar / HbA1c</div><div class="test-desc">Fasting, PP, and 3-month average glucose levels for diabetes management.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🫁</div><div class="test-name">Liver Function Test (LFT)</div><div class="test-desc">SGPT, SGOT, bilirubin — monitors liver health and medication effects.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🔬</div><div class="test-name">Kidney Function Test (KFT)</div><div class="test-desc">Creatinine, urea, eGFR — essential for kidney disease detection and monitoring.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">🧬</div><div class="test-name">Urine Routine & Microscopy</div><div class="test-desc">Detects infections, kidney disorders, and diabetes markers through urine analysis.</div><div class="test-price"></div></div>
-    <div class="test-card"><div class="test-icon">💉</div><div class="test-name">Full Body Checkup Package</div><div class="test-desc">Comprehensive 40+ parameter panel covering heart, liver, kidney, diabetes, thyroid.</div><div class="test-price"></div></div>
+    <div class="test-card"><div class="test-icon">🩸</div><div class="test-name">Complete Blood Count (CBC)</div><div class="test-desc">Checks RBCs, WBCs, hemoglobin, and platelets. Essential for routine health monitoring.</div><div class="test-price">₹ 150 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🫀</div><div class="test-name">Lipid Profile</div><div class="test-desc">Cholesterol, triglycerides, LDL/HDL — critical for heart health assessment.</div><div class="test-price">₹ 250 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🦋</div><div class="test-name">Thyroid Function (T3/T4/TSH)</div><div class="test-desc">Detects hypo/hyperthyroidism. Recommended for fatigue, weight changes, and mood disorders.</div><div class="test-price">₹ 400 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🍬</div><div class="test-name">Blood Sugar / HbA1c</div><div class="test-desc">Fasting, PP, and 3-month average glucose levels for diabetes management.</div><div class="test-price">₹ 120 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🫁</div><div class="test-name">Liver Function Test (LFT)</div><div class="test-desc">SGPT, SGOT, bilirubin — monitors liver health and medication effects.</div><div class="test-price">₹ 350 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🔬</div><div class="test-name">Kidney Function Test (KFT)</div><div class="test-desc">Creatinine, urea, eGFR — essential for kidney disease detection and monitoring.</div><div class="test-price">₹ 350 onwards</div></div>
+    <div class="test-card"><div class="test-icon">🧬</div><div class="test-name">Urine Routine & Microscopy</div><div class="test-desc">Detects infections, kidney disorders, and diabetes markers through urine analysis.</div><div class="test-price">₹ 80 onwards</div></div>
+    <div class="test-card"><div class="test-icon">💉</div><div class="test-name">Full Body Checkup Package</div><div class="test-desc">Comprehensive 40+ parameter panel covering heart, liver, kidney, diabetes, thyroid.</div><div class="test-price">₹ 999 onwards</div></div>
   </div>
 </section>
 
@@ -1191,7 +1191,6 @@
       <div class="section-eyebrow">Book Online</div>
       <h2 class="section-title">Book your test online</h2>
       <p class="section-desc">Fill in your details, pick a test, and we'll confirm your booking on WhatsApp.</p>
-      <p class="section-note">We send a trained phlebotomist to your doorstep to collect sample.</p>
     </div>
 
     <div class="book-card">
@@ -1251,7 +1250,7 @@
       <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Address</div><div class="contact-value"><a href="https://www.google.com/maps?cid=17617575349661805507" target="_blank" rel="noopener">Rd Number 3, near State Bank of India, Juran Chapra, Brahmapura, Muzaffarpur, Bihar 842001</a></div></div></div>
       <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-label">Phone</div><div class="contact-value"><a href="tel:09102042222">091020 42222</a></div></div></div>
       <div class="contact-item"><div class="contact-icon">🕗</div><div><div class="contact-label">Hours</div><div class="contact-value">Mon–Fri: 8:00 AM – 8:00 PM<br>Sat–Sun: 8:00 AM – 6:00 PM</div></div></div>
-      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-label">Book via WhatsApp</div><div class="contact-value"><a href="https://wa.me/919631558655" style="color:var(--green);">wa.me → Book Appointment</a></div></div></div>
+      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-label">Book via WhatsApp</div><div class="contact-value"><a href="https://wa.me/919198478500" style="color:var(--green);">wa.me → Book Appointment</a></div></div></div>
     </div>
     <div class="map-col">
       <div class="map-wrap">
@@ -1312,7 +1311,7 @@
   <div class="booking-title">Ready to book your test?</div>
   <p class="booking-sub">Get accurate reports from Muzaffarpur's most trusted pathology lab — home collection available.</p>
   <div class="booking-actions">
-    <a href="https://wa.me/919631558655" class="btn-wa">
+    <a href="https://wa.me/919198478500" class="btn-wa">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.116 1.524 5.848L0 24l6.335-1.508A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.213-3.727.977.996-3.638-.234-.374A9.818 9.818 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
       Book on WhatsApp
     </a>
@@ -1323,7 +1322,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Cure <span>Pathology</span></div>
-  <div class="footer-copy">© 2026 Cure Pathology. Juran Chapra, Muzaffarpur, Bihar.</div>
+  <div class="footer-copy">© 2025 Cure Pathology. Juran Chapra, Muzaffarpur, Bihar.</div>
   <div class="footer-copy" style="color:rgba(255,255,255,0.2);">Designed by Mango Web Design & Studio</div>
 </footer>
 
@@ -1429,25 +1428,25 @@
   /* ── Online booking: searchable test dropdown + WhatsApp submit ── */
   (function () {
     const TESTS = [
-      { name: 'Complete Blood Count (CBC)' },
-      { name: 'Lipid Profile'},
-      { name: 'Thyroid Profile (T3 T4 TSH)' },
-      { name: 'Blood Sugar (Fasting / PP)' },
-      { name: 'HbA1c — Diabetes (3-month)' },
-      { name: 'Liver Function Test (LFT)' },
-      { name: 'Kidney Function Test (KFT)' },
-      { name: 'Urine Routine & Microscopy' },
-      { name: 'Full Body Checkup (40+ tests)'},
-      { name: 'Vitamin D (25-OH)' },
-      { name: 'Vitamin B12' },
-      { name: 'Dengue (NS1 / IgG / IgM)' },
-      { name: 'Typhoid (Widal)' },
-      { name: 'Malaria Antigen' },
-      { name: 'CRP (C-Reactive Protein)' },
-      { name: 'Iron Studies' },
-      { name: 'Beta hCG (Pregnancy)' },
-      { name: 'Electrolytes (Na / K / Cl)' },
-      { name: 'Other / Not sure — please advise' }
+      { name: 'Complete Blood Count (CBC)', price: '₹150' },
+      { name: 'Lipid Profile', price: '₹250' },
+      { name: 'Thyroid Profile (T3 T4 TSH)', price: '₹400' },
+      { name: 'Blood Sugar (Fasting / PP)', price: '₹120' },
+      { name: 'HbA1c — Diabetes (3-month)', price: '₹450' },
+      { name: 'Liver Function Test (LFT)', price: '₹350' },
+      { name: 'Kidney Function Test (KFT)', price: '₹350' },
+      { name: 'Urine Routine & Microscopy', price: '₹80' },
+      { name: 'Full Body Checkup (40+ tests)', price: '₹999' },
+      { name: 'Vitamin D (25-OH)', price: '₹900' },
+      { name: 'Vitamin B12', price: '₹700' },
+      { name: 'Dengue (NS1 / IgG / IgM)', price: '₹600' },
+      { name: 'Typhoid (Widal)', price: '₹150' },
+      { name: 'Malaria Antigen', price: '₹200' },
+      { name: 'CRP (C-Reactive Protein)', price: '₹400' },
+      { name: 'Iron Studies', price: '₹650' },
+      { name: 'Beta hCG (Pregnancy)', price: '₹500' },
+      { name: 'Electrolytes (Na / K / Cl)', price: '₹350' },
+      { name: 'Other / Not sure — please advise', price: '' }
     ];
 
     const dd = document.getElementById('bk-dropdown');
@@ -1488,7 +1487,7 @@
     render('');
 
     /* validate + open WhatsApp with details pre-filled */
-    const LAB_WA = '919631558655';
+    const LAB_WA = '919198478500';
     const status = document.getElementById('bk-status');
     function showStatus(msg, isErr) {
       status.textContent = msg;
