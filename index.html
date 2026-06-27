@@ -722,6 +722,19 @@
       border: 1px solid rgba(0,0,0,0.08);
     }
     .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+    .map-col { display: flex; flex-direction: column; gap: 14px; }
+    .map-directions {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 14px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .map-directions:hover { background: var(--navy-mid); transform: translateY(-2px); }
 
     /* ── ONLINE BOOKING FORM ── */
     .book-section { background: var(--navy-mid); }
@@ -1038,7 +1051,7 @@
     <div class="stat-divider"></div>
     <div class="stat"><div class="stat-num">8am</div><div class="stat-label">Opens Daily</div></div>
   </div>
-  <div class="scroll-hint"><span>Scroll</span><div class="scroll-arrow"></div></div>
+  <div class="scroll-hint"><span></span><div class="scroll-arrow"></div></div>
 </section>
 
 <!-- TRUST STRIP -->
@@ -1178,7 +1191,7 @@
       <div class="section-eyebrow">Book Online</div>
       <h2 class="section-title">Book your test online</h2>
       <p class="section-desc">Fill in your details, pick a test, and we'll confirm your booking on WhatsApp.</p>
-      <p class="section-desc">We send a trained phlebotomist to your doorstep to collect sample.</p>
+      <p class="section-note">We send a trained phlebotomist to your doorstep to collect sample.</p>
     </div>
 
     <div class="book-card">
@@ -1235,15 +1248,20 @@
   </div>
   <div class="contact-grid">
     <div class="contact-info">
-      <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Address</div><div class="contact-value">Rd Number 3, near State Bank of India, Juran Chapra, Brahmapura, Muzaffarpur, Bihar 842001</div></div></div>
+      <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Address</div><div class="contact-value"><a href="https://www.google.com/maps?cid=17617575349661805507" target="_blank" rel="noopener">Rd Number 3, near State Bank of India, Juran Chapra, Brahmapura, Muzaffarpur, Bihar 842001</a></div></div></div>
       <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-label">Phone</div><div class="contact-value"><a href="tel:09102042222">091020 42222</a></div></div></div>
       <div class="contact-item"><div class="contact-icon">🕗</div><div><div class="contact-label">Hours</div><div class="contact-value">Mon–Fri: 8:00 AM – 8:00 PM<br>Sat–Sun: 8:00 AM – 6:00 PM</div></div></div>
-      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-label">Book via WhatsApp</div><div class="contact-value"><a href="https://wa.me/919198478500" style="color:var(--green);">wa.me → Book Appointment</a></div></div></div>
+      <div class="contact-item"><div class="contact-icon">💬</div><div><div class="contact-label">Book via WhatsApp</div><div class="contact-value"><a href="https://wa.me/919631558655" style="color:var(--green);">wa.me → Book Appointment</a></div></div></div>
     </div>
-    <div class="map-wrap">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.5!2d85.3910!3d26.1197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed31000a5c5c5d%3A0xf4c5d8d8d8d8d8d8!2sCure+Pathology!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cure Pathology Location"></iframe>
+    <div class="map-col">
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=Cure%20Pathology%2C%20Juran%20Chapra%2C%20Brahmapura%2C%20Muzaffarpur%2C%20Bihar%20842001&z=16&output=embed"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cure Pathology Location on Google Maps"></iframe>
+      </div>
+      <a class="map-directions" href="https://www.google.com/maps?cid=17617575349661805507" target="_blank" rel="noopener">
+        📍 Get Directions to Cure Pathology →
+      </a>
     </div>
   </div>
 </section>
@@ -1305,7 +1323,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Cure <span>Pathology</span></div>
-  <div class="footer-copy">© 2026 Cure Pathology. Juran Chapra, Muzaffarpur, Bihar.</div>
+  <div class="footer-copy">© 2025 Cure Pathology. Juran Chapra, Muzaffarpur, Bihar.</div>
   <div class="footer-copy" style="color:rgba(255,255,255,0.2);">Designed by Mango Web Design & Studio</div>
 </footer>
 
@@ -1412,23 +1430,23 @@
   (function () {
     const TESTS = [
       { name: 'Complete Blood Count (CBC)' },
-      { name: 'Lipid Profile' },
+      { name: 'Lipid Profile'},
       { name: 'Thyroid Profile (T3 T4 TSH)' },
       { name: 'Blood Sugar (Fasting / PP)' },
       { name: 'HbA1c — Diabetes (3-month)' },
       { name: 'Liver Function Test (LFT)' },
       { name: 'Kidney Function Test (KFT)' },
       { name: 'Urine Routine & Microscopy' },
-      { name: 'Full Body Checkup (40+ tests)' },
+      { name: 'Full Body Checkup (40+ tests)'},
       { name: 'Vitamin D (25-OH)' },
       { name: 'Vitamin B12' },
       { name: 'Dengue (NS1 / IgG / IgM)' },
       { name: 'Typhoid (Widal)' },
       { name: 'Malaria Antigen' },
       { name: 'CRP (C-Reactive Protein)' },
-      { name: 'Iron Studies'},
+      { name: 'Iron Studies' },
       { name: 'Beta hCG (Pregnancy)' },
-      { name: 'Electrolytes (Na / K / Cl)'},
+      { name: 'Electrolytes (Na / K / Cl)' },
       { name: 'Other / Not sure — please advise' }
     ];
 
